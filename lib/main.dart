@@ -3,8 +3,12 @@ import 'package:daily_space/configs/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'data/source/local/local_datasource.dart';
 
-void main() {
+
+void main()async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  await LocalDataSource.initialize();
   runApp(const DailyApp());
 }
 
